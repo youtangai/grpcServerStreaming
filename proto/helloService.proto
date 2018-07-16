@@ -1,0 +1,13 @@
+syntax="proto3";
+
+service HelloServerStreamingService {
+  rpc Greet (HelloRequest) returns (stream HelloResponse) {}
+}
+
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
